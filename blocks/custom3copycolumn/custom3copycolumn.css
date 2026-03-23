@@ -1,0 +1,22 @@
+.section.custom3copycolumn {
+    margin: 0 !important;
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.custom3copycolumn .block>div {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.custom3copycolumn .block>div div {
+    width: 33.33%;
+    padding: 0px 10px;
+}
+
+.custom3copycolumn .block>div div picture {
+    display: block;
+    margin-bottom: 10px;
+}
