@@ -1,0 +1,30 @@
+.custom-two-column-image-copy .imagecopycolumns>div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.custom-two-column-image-copy .imagecopycolumns>div>div {
+    width: calc(50% - 10px);
+}
+
+.custom-two-column-image-copy .imagecopycolumns a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    color: #292929;
+    display: inline-block;
+    transition: all 0.4s ease;
+    background: transparent;
+    text-decoration: none;
+    line-height: 1;
+    background: rgba(20, 115, 230, 1);
+    color: #fff;
+    border: unset;
+    margin-top: 10px;
+}
+
+.custom-two-column-image-copy .imagecopycolumns img {
+    border-radius: 10px;
+}
