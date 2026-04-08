@@ -1,0 +1,45 @@
+.custom-team-sec {
+    background: #eb1000;
+    margin: 0 !important;
+}
+
+.custom-team-sec * {
+    color: #fff;
+}
+
+.custom-team-sec h2 {
+    text-align: center;
+    margin: 0 auto 40px auto;
+}
+
+.custom-team-sec .team-columns img {
+    display: block;
+}
+
+.custom-team-sec .team-columns>div {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.custom-team-sec .team-columns>div>div {
+    width: calc(33.33% - 20px);
+}
+
+.custom-team-sec .team-columns p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.custom-team-sec .team-columns p a {
+    display: inline-block;
+}
+
+.custom-team-sec .team-columns>div>div p:nth-last-child(1) img {
+    width: 30px;
+}
+
+.custom-team-sec .team-columns>div>div p:nth-last-child(2) {
+    margin: 10px 0;
+}

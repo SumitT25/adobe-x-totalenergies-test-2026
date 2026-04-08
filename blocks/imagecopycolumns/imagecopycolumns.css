@@ -8,6 +8,10 @@
     width: calc(50% - 10px);
 }
 
+.custom-two-column-image-copy .imagecopycolumns>div>div p:nth-child(1) {
+    margin: 0;
+}
+
 .custom-two-column-image-copy .imagecopycolumns a {
     font-size: 0.95rem;
     font-weight: bold;
@@ -27,4 +31,10 @@
 
 .custom-two-column-image-copy .imagecopycolumns img {
     border-radius: 10px;
+    display: block;
+}
+
+.custom-two-column-image-copy h2 {
+    text-align: center;
+    margin: 0 auto 40px auto;
 }
