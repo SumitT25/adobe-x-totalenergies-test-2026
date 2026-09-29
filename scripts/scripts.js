@@ -236,6 +236,10 @@ async function initAdobeAuth() {
   }
 }
 async function loadPage() {
+  const authenticated = await initAdobeAuth();
+  if (!authenticated) {
+    return;
+  }
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
