@@ -1,4 +1,4 @@
-const ADOBE_CLIENT_ID = 'PASTE_YOUR_CLIENT_ID_HERE';
+const ADOBE_CLIENT_ID = '3c4d6d13e656458ab1801f036a51c81a';
 
 const ADOBE_AUTHORIZE_URL = 'https://ims-na1.adobelogin.com/ims/authorize/v2';
 const ADOBE_TOKEN_URL = 'https://ims-na1.adobelogin.com/ims/token/v3';
