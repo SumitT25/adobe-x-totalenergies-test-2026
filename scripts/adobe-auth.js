@@ -6,7 +6,7 @@ const ADOBE_USERINFO_URL = 'https://ims-na1.adobelogin.com/ims/userinfo/v2';
 
 const REDIRECT_URI = window.location.origin + window.location.pathname;
 
-const SCOPES = 'openid,AdobeID,read_organizations';
+const SCOPES = 'openid,AdobeID,ee.express_api';
 
 function base64UrlEncode(buffer) {
   return btoa(String.fromCharCode(...new Uint8Array(buffer)))
