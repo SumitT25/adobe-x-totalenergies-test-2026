@@ -11,12 +11,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-import {
-  login,
-  logout,
-  handleCallback,
-  getUserInfo,
-} from './adobe-auth.js';
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -184,62 +179,8 @@ function loadDelayed() {
   window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }
-async function initAdobeAuth() {
-  try {
-    const tokens = await handleCallback();
 
-    let user = await getUserInfo();
-
-    if (!user && !tokens) {
-      document.body.classList.add('adobe-auth-required');
-
-      const overlay = document.createElement('div');
-      overlay.className = 'adobe-auth-overlay';
-
-      overlay.innerHTML = `
-        <div class="adobe-auth-box">
-          <h1>Adobe Sign In Required</h1>
-          <p>Please sign in with your Adobe account to continue.</p>
-          <button type="button" class="adobe-signin">
-            Sign in with Adobe
-          </button>
-        </div>
-      `;
-
-      document.body.append(overlay);
-
-      overlay.querySelector('.adobe-signin').addEventListener('click', login);
-
-      return false;
-    }
-
-    if (user) {
-      window.adobeUser = user;
-
-      console.log('Adobe user:', user);
-
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error('Adobe authentication failed:', error);
-
-    document.body.innerHTML = `
-      <div style="padding:40px;font-family:Arial">
-        <h1>Authentication Error</h1>
-        <p>${error.message}</p>
-      </div>
-    `;
-
-    return false;
-  }
-}
 async function loadPage() {
-  const authenticated = await initAdobeAuth();
-  if (!authenticated) {
-    return;
-  }
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
