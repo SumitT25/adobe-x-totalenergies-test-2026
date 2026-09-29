@@ -355,3 +355,32 @@ main .section.highlight {
 .custom-logo-sec * {
   margin: 0;
 }
+.adobe-auth-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.adobe-auth-box {
+  width: min(90%, 420px);
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 10%);
+}
+
+.adobe-signin {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 6px;
+  background: #1473e6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
